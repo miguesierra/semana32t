@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tarea semana 32</title>
+<style>
+	.titu
+	{
+		position: absolute;
+		left:550px;
+		top:120px;
+		width:1px;
+		height: 1px;
+			font-size:0px;
+		z-index:2;
+		background-color: orange;
+		font-family: L2;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+	}
+	.accio
+	{
+			position: absolute;
+		border-style: solid;
+		border-color:black;
+		left:80px;
+		top:120px;
+		width:80px;
+		height:80px;
+		font-size:30px;
+		z-index:2;
+		font-family: L2;
+		border-color: black;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+	}
+	.accio3
+	{
+			position: absolute;
+		border-style: solid;
+		border-color:black;
+		left:80px;
+		top:250px;
+		width:80px;
+		height:80px;
+		font-size:30px;
+		z-index:2;
+		font-family: L2;
+		border-color: black;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+	}
+	.accio4
+	{
+			position: absolute;
+		border-style: solid;
+		border-color:black;
+		left:80px;
+		top:350px;
+		width:80px;
+		height:80px;
+		font-size:20px;
+		z-index:2;
+		font-family: L2;
+		border-color: black;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+	}
+		.tt
+	{
+		left:1px;
+		top:1px;
+		width:100%;
+		height:100%;
+		position: absolute;
+	}
+			.tt1
+	{
+		left:901px;
+		top:380px;
+		width:0px;
+		height:0px;
+		position: absolute;
+		font-size:0px;
+		border-style:solid;
+		border-color: black;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	z-index: 3;
+       	font-family: L1;
+	}
+	@font-face
+	{
+		font-family: l1;
+		src:url(gg.ttf);
+	}
+	@font-face
+	{
+		font-family: l2;
+		src:url(dd.ttf);
+	}
+	.tit
+	{
+		left:550px;
+		top:30px;
+		width:200px;
+		height:50px;
+		position: absolute;
+		z-index:4px;
+		border-style:solid;
+		border-color: black;
+		font-family:l1;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+       	font-size:30px;
+
+	}
+	 body
+       {
+     background:-webkit-linear-gradient(30deg, #ED9714 30%, #E64040  70%);
+       }
+
+	.neo
+	{
+		left:550px;
+		top:130px;
+		width:0px;
+		height:0px;
+		position: absolute;
+		z-index:3px;
+		background-color: black;
+		background-image: url(nn.png);
+    
+	}	
+	.ted
+	{
+		left:550px;
+		top:130px;
+		width:0px;
+		height:0px;
+		position: absolute;
+		z-index:3px;
+		background-color: black;
+	
+    
+	}		
+	.com
+	{
+		position: absolute;
+		left:550px;
+		top:120px;
+		width:1px;
+		height: 1px;
+			font-size:0px;
+		z-index:2;
+		background-color: orange;
+		font-family: L2;
+		text-align: center;
+        text-orientation: center;
+       	align-content:center;
+	}
+</style>
+</head>
+<body onmousemove="posicion(event)">
+	<div class="titu" id="mm"></div>
+	<div class="accio" onclick="action()">Eje 1</div>
+	 <div class="tt"></div>
+	 <div class="tt1" id="a" onclick="action2()">X</div>
+	 <div class="tit" onclick="actionn()">Neosistemas</div>
+      <div class="neo" id="neo1"></div>
+      <div class="accio3" onclick="actionn3()">eje 2</div>
+      <div class="ted" id="mu"></div>
+      <div class="accio4" onclick="comentario()">comentario</div>
+      <div class="com" id="coment">Un excelnete trabajo que requeria un buen nivel de logica y algunos trucos para ser ejecutado especificamente en el punto 2, pues luego de muchos intentos consegui que la funcion tomara las cordenadas de toda la pantalla, pero en general aunque fue cansado me siento satisfecho con lo que hice</div>
+	<script>
+function comentario()
+{
+	a.style.height=30+"px";
+	a.style.width=30+"px";
+coment.style.width=400+"px";
+	coment.style.height=300+"px";
+	coment.style.fontSize=28+"px";
+	a.style.fontSize=20+"px";
+}
+function posicion(event)
+{
+	x3=event.clientX;
+	y3=event.clientY;
+   
+    if(x3>549&&x3<955&&y3>120&&y3<423)
+    {
+    	 mm.innerHTML=x3+" "+y3+"<br>estoy dentro";
+
+    }
+    else 
+    {
+    	
+    	 mm.innerHTML=x3+" "+y3+"<br>estoy fuera";
+    	
+    }
+}
+
+function action()
+{
+	mm.style.fontSize=40+"px";
+	mm.style.width=400+"px";
+	mm.style.height=300+"px";
+	mm.style.fontSize=30+"px";
+	a.style.height=30+"px";
+	a.style.width=30+"px";
+		a.style.fontSize=20+"px";
+
+}
+function action2()
+{
+	mm.style.fontSize=0+"px";
+	mm.style.width=0+"px";
+	mm.style.height=0+"px";
+	mm.style.fontSize=0+"px";
+	a.style.height=0+"px";
+	a.style.width=0+"px";
+	a.innerHTML="x";
+	 coment.style.fontSize=0+"px";
+	coment.style.width=0+"px";
+   coment.style.height=0+"px";
+     a.style.fontSize=0+"px";
+   clearInterval(crono);
+    mu.style.width=0+"px";
+   mu.style.height=0+"px";
+    a.style.fontSize=0+"px";
+      
+
+
+}
+function actionn()
+{
+	neo1.style.width=300+"px";
+	neo1.style.height=300+"px";
+
+
+}
+function actionn2()
+{
+	if(neo1.style.width=300+"px")
+	{
+		neo1.style.width=0+"px";
+	neo1.style.height=0+"px";
+
+	}
+   
+}
+function actionn3()
+{ 
+ mu.style.width=100+"px";
+ mu.style.height=100+"px";
+ a.style.height=30+"px";
+ a.style.width=30+"px";
+ a.style.fontSize=20+"px";
+crono=setInterval(libre,500)
+}
+x9=0;
+y9=0;
+function libre()
+{	
+	if( mu.style.width=100+"px")
+	{
+		      x9=x9+100;
+              y9=y9+50;
+		if(x9>111&&x9<400)
+		{
+			
+
+			mu.style.backgroundColor="blue";
+		  mu.style.width=x9+"px";
+	      mu.style.height=y9+"px";
+         
+           
+		}
+	  else
+	  {
+		if(x9>400&&x9<600)
+		{
+			 
+			mu.style.backgroundColor="yellow";
+			 mu.style.width=x9+"px";
+	        mu.style.height=y9+"px";
+
+			
+        
+		}
+		else
+         {
+         	if(x9>600)
+         	{
+         	
+         	mu.style.backgroundColor="green";
+          mu.style.width=x9+"px";
+	      mu.style.height=y9+"px";
+             x9=x9-180;
+             y9=y9-120;
+
+         	}
+         	
+         }
+    }
+     }
+     
+     
+     }  
+crono1=setInterval(actionn2,2000)
+</script>
+</body>
+</html>
